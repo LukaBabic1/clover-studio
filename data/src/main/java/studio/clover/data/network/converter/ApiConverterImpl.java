@@ -1,10 +1,10 @@
-package studio.clover.data.client;
+package studio.clover.data.network.converter;
 
 import clover.studio.domain.StringUtils;
 import clover.studio.domain.model.AccessToken;
 import clover.studio.domain.model.User;
-import studio.clover.data.apimodel.ApiLoginResponse;
-import studio.clover.data.apimodel.ApiUser;
+import studio.clover.data.network.apimodel.ApiLoginResponse;
+import studio.clover.data.network.apimodel.ApiUser;
 import clover.studio.domain.model.LoginResult;
 
 public final class ApiConverterImpl implements ApiConverter {

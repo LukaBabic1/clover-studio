@@ -1,4 +1,4 @@
-package studio.clover.data.client;
+package studio.clover.data.network.client;
 
 import rx.Single;
 import clover.studio.domain.model.LoginResult;

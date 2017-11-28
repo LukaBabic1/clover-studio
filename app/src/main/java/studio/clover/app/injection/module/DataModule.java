@@ -8,7 +8,7 @@ import clover.studio.domain.storage.UserRepository;
 import dagger.Module;
 import dagger.Provides;
 import studio.clover.app.injection.ForApplication;
-import studio.clover.data.client.UserClient;
+import studio.clover.data.network.client.UserClient;
 import studio.clover.data.repository.UserRepositoryImpl;
 import studio.clover.data.storage.UserSharedPreferences;
 import studio.clover.data.storage.UserSharedPreferencesImpl;

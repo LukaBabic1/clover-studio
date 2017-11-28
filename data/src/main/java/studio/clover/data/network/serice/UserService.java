@@ -1,11 +1,11 @@
-package studio.clover.data.serice;
+package studio.clover.data.network.serice;
 
 import retrofit2.http.Body;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import rx.Single;
-import studio.clover.data.apimodel.ApiLoginRequest;
-import studio.clover.data.apimodel.ApiLoginResponse;
+import studio.clover.data.network.apimodel.ApiLoginRequest;
+import studio.clover.data.network.apimodel.ApiLoginResponse;
 
 public interface UserService {
 

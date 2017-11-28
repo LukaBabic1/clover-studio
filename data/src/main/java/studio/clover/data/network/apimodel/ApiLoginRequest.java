@@ -1,4 +1,4 @@
-package studio.clover.data.apimodel;
+package studio.clover.data.network.apimodel;
 
 import com.google.gson.annotations.SerializedName;
 

@@ -5,7 +5,7 @@ import clover.studio.domain.model.LoginResult;
 import clover.studio.domain.storage.UserRepository;
 import rx.Completable;
 import rx.Single;
-import studio.clover.data.client.UserClient;
+import studio.clover.data.network.client.UserClient;
 import studio.clover.data.storage.UserSharedPreferences;
 
 public final class UserRepositoryImpl implements UserRepository {

@@ -1,4 +1,4 @@
-package studio.clover.data.serice;
+package studio.clover.data.network.configuration;
 
 public final class UrlsImpl implements Urls {
 

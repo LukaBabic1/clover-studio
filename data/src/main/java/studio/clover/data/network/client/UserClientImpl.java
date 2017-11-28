@@ -1,9 +1,10 @@
-package studio.clover.data.client;
+package studio.clover.data.network.client;
 
 import rx.Single;
-import studio.clover.data.apimodel.ApiLoginRequest;
+import studio.clover.data.network.apimodel.ApiLoginRequest;
 import clover.studio.domain.model.LoginResult;
-import studio.clover.data.serice.UserService;
+import studio.clover.data.network.converter.ApiConverter;
+import studio.clover.data.network.serice.UserService;
 
 public final class UserClientImpl implements UserClient {
 

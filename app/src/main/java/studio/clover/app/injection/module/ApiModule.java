@@ -11,13 +11,13 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import studio.clover.app.BuildConfig;
-import studio.clover.data.client.ApiConverter;
-import studio.clover.data.client.ApiConverterImpl;
-import studio.clover.data.client.UserClient;
-import studio.clover.data.client.UserClientImpl;
-import studio.clover.data.serice.Urls;
-import studio.clover.data.serice.UrlsImpl;
-import studio.clover.data.serice.UserService;
+import studio.clover.data.network.converter.ApiConverter;
+import studio.clover.data.network.converter.ApiConverterImpl;
+import studio.clover.data.network.client.UserClient;
+import studio.clover.data.network.client.UserClientImpl;
+import studio.clover.data.network.configuration.Urls;
+import studio.clover.data.network.configuration.UrlsImpl;
+import studio.clover.data.network.serice.UserService;
 
 @Module
 public final class ApiModule {
