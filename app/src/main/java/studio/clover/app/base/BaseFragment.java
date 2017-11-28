@@ -20,7 +20,6 @@ public abstract class BaseFragment extends DaggerFragment implements BackPropaga
     @Inject
     protected Resources resources;
 
-
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,6 +68,12 @@ public abstract class BaseFragment extends DaggerFragment implements BackPropaga
     public void onDestroy() {
         onPreDestroy();
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onBack() {
+        getPresenter().back();
+        return true;
     }
 
     public abstract ScopedPresenter getPresenter();

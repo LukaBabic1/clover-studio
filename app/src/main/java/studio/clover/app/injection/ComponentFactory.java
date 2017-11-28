@@ -9,6 +9,7 @@ import studio.clover.app.injection.activity.DaggerActivityComponent;
 import studio.clover.app.injection.application.ApplicationComponent;
 import studio.clover.app.injection.application.ApplicationModule;
 import studio.clover.app.injection.application.DaggerApplicationComponent;
+import studio.clover.app.injection.fragment.FragmentComponent;
 
 public final class ComponentFactory {
 

@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 
 import studio.clover.app.injection.ComponentFactory;
-import studio.clover.app.injection.FragmentComponent;
+import studio.clover.app.injection.fragment.FragmentComponent;
 
 public abstract class DaggerFragment extends Fragment {
 
