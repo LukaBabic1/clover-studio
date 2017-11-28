@@ -2,7 +2,7 @@ package studio.clover.data.client;
 
 import rx.Single;
 import studio.clover.data.apimodel.ApiLoginRequest;
-import studio.clover.data.model.LoginResult;
+import clover.studio.domain.model.LoginResult;
 import studio.clover.data.serice.UserService;
 
 public final class UserClientImpl implements UserClient {

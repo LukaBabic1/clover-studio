@@ -1,7 +1,7 @@
 package studio.clover.data.client;
 
 import rx.Single;
-import studio.clover.data.model.LoginResult;
+import clover.studio.domain.model.LoginResult;
 
 public interface UserClient {
 

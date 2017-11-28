@@ -11,8 +11,8 @@ public final class LoginFragment extends BaseFragment implements LoginContract.V
     }
 
     @Override
-    protected void inject(final FragmentComponent fragmentComponent) {
-        fragmentComponent.inject(this);
+    protected void inject(final FragmentComponent component) {
+        component.inject(this);
     }
 
     @Override

@@ -1,7 +1,4 @@
-package studio.clover.data.model;
-
-import clover.studio.domain.model.AccessToken;
-import clover.studio.domain.model.User;
+package clover.studio.domain.model;
 
 public final class LoginResult {
 

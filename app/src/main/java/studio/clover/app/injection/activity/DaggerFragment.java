@@ -16,7 +16,7 @@ public abstract class DaggerFragment extends Fragment {
         inject(getFragmentComponent());
     }
 
-    protected abstract void inject(FragmentComponent fragmentComponent);
+    protected abstract void inject(FragmentComponent component);
 
     public FragmentComponent getFragmentComponent() {
         if (fragmentComponent == null) {

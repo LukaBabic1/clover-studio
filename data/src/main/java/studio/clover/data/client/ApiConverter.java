@@ -1,7 +1,7 @@
 package studio.clover.data.client;
 
 import studio.clover.data.apimodel.ApiLoginResponse;
-import studio.clover.data.model.LoginResult;
+import clover.studio.domain.model.LoginResult;
 
 public interface ApiConverter {
 

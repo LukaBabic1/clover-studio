@@ -1,4 +1,10 @@
 package studio.clover.app.injection.application;
 
-public interface ApplicationComponentExposes extends ApplicationModule.Exposes {
-}
+import studio.clover.app.injection.module.ApiModule;
+import studio.clover.app.injection.module.DataModule;
+import studio.clover.app.injection.module.UtilsModule;
+
+public interface ApplicationComponentExposes extends ApplicationModule.Exposes,
+                                                     ApiModule.Exposes,
+                                                     DataModule.Exposes,
+                                                     UtilsModule.Exposes { }

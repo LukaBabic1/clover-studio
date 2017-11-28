@@ -5,7 +5,7 @@ import clover.studio.domain.model.AccessToken;
 import clover.studio.domain.model.User;
 import studio.clover.data.apimodel.ApiLoginResponse;
 import studio.clover.data.apimodel.ApiUser;
-import studio.clover.data.model.LoginResult;
+import clover.studio.domain.model.LoginResult;
 
 public final class ApiConverterImpl implements ApiConverter {
 
