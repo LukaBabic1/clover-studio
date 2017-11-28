@@ -2,10 +2,12 @@ package clover.studio.domain.model;
 
 public final class AccessToken {
 
-    public final String accessToken;
+    public static final AccessToken EMPTY = new AccessToken("");
 
-    public AccessToken(final String accessToken) {
-        this.accessToken = accessToken;
+    public final String value;
+
+    public AccessToken(final String value) {
+        this.value = value;
     }
 
     @Override
@@ -19,19 +21,19 @@ public final class AccessToken {
 
         AccessToken that = (AccessToken) o;
 
-        return accessToken != null ? accessToken.equals(that.accessToken) : that.accessToken == null;
+        return value != null ? value.equals(that.value) : that.value == null;
 
     }
 
     @Override
     public int hashCode() {
-        return accessToken != null ? accessToken.hashCode() : 0;
+        return value != null ? value.hashCode() : 0;
     }
 
     @Override
     public String toString() {
         return "AccessToken{" +
-                "accessToken='" + accessToken + '\'' +
+                "value='" + value + '\'' +
                 '}';
     }
 }
