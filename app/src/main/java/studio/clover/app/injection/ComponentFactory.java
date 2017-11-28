@@ -5,11 +5,15 @@ import studio.clover.app.injection.activity.ActivityComponent;
 import studio.clover.app.injection.activity.DaggerActivity;
 import studio.clover.app.injection.activity.DaggerFragment;
 import studio.clover.app.injection.application.ApplicationComponent;
+import studio.clover.app.injection.application.ApplicationModule;
+import studio.clover.app.injection.application.DaggerApplicationComponent;
 
 public final class ComponentFactory {
 
     public static ApplicationComponent createApplicationComponent(final CloverApplication application) {
-        return null;
+        return DaggerApplicationComponent.builder()
+                                         .applicationModule(new ApplicationModule(application))
+                                         .build();
     }
 
     public static ActivityComponent createActivityComponent(final DaggerActivity activity, final CloverApplication application) {
