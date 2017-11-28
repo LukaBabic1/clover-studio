@@ -8,19 +8,24 @@ import studio.clover.data.storage.UserSharedPreferences;
 
 public final class UserRepositoryImpl implements UserRepository {
 
-    private final UserSharedPreferences userSharedPreferences;
+    private final UserSharedPreferences preferences;
 
-    public UserRepositoryImpl(final UserSharedPreferences userSharedPreferences) {
-        this.userSharedPreferences = userSharedPreferences;
+    public UserRepositoryImpl(final UserSharedPreferences preferences) {
+        this.preferences = preferences;
+    }
+
+    @Override
+    public Single<AccessToken> loginUser(final String username, final String password) {
+        return null;
     }
 
     @Override
     public Completable saveAccessToken(final AccessToken token) {
-        return Completable.fromAction(() -> userSharedPreferences.saveAccessToken(token));
+        return Completable.fromAction(() -> preferences.saveAccessToken(token));
     }
 
     @Override
     public Single<AccessToken> getAccessToken() {
-        return Single.fromCallable(userSharedPreferences::getAccessToken);
+        return Single.fromCallable(preferences::getAccessToken);
     }
 }

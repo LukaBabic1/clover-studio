@@ -6,6 +6,8 @@ import rx.Single;
 
 public interface UserRepository {
 
+    Single<AccessToken> loginUser(String username, String password);
+
     Completable saveAccessToken(AccessToken token);
 
     Single<AccessToken> getAccessToken();
