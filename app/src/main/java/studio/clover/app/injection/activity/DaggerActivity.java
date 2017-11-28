@@ -19,13 +19,13 @@ public abstract class DaggerActivity extends AppCompatActivity {
 
     public ActivityComponent getActivityComponent() {
         if (activityComponent == null) {
-            activityComponent = ComponentFactory.createActivityComponent(this, getMoonliteApplication());
+            activityComponent = ComponentFactory.createActivityComponent(this, getCloverApplication());
         }
 
         return activityComponent;
     }
 
-    private CloverApplication getMoonliteApplication() {
+    private CloverApplication getCloverApplication() {
         return CloverApplication.from(this);
     }
 
