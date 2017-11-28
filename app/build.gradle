@@ -66,6 +66,8 @@ dependencies {
     compile 'io.reactivex:rxjava:' + project.ext.rxJavaVersion
     compile 'io.reactivex:rxandroid:' + project.ext.rxAndroidVersion
 
+    compile 'com.annimon:stream:' + project.ext.streamVersion
+
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 
