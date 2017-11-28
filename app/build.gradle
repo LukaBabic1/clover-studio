@@ -26,8 +26,8 @@ android {
     defaultConfig {
         applicationId "studio.clover.app"
 
-        minSdkVersion 19
-        targetSdkVersion 27
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
 
         versionCode 1
         versionName "1.0"
