@@ -4,7 +4,9 @@ import javax.inject.Singleton;
 
 import dagger.Component;
 import studio.clover.app.injection.application.module.ApiModule;
+import studio.clover.app.injection.application.module.ConnectivityModule;
 import studio.clover.app.injection.application.module.DataModule;
+import studio.clover.app.injection.application.module.ThreadingModule;
 import studio.clover.app.injection.application.module.UtilsModule;
 
 @Singleton
@@ -12,7 +14,9 @@ import studio.clover.app.injection.application.module.UtilsModule;
         modules = {
                 ApplicationModule.class,
                 ApiModule.class,
+                ConnectivityModule.class,
                 DataModule.class,
+                ThreadingModule.class,
                 UtilsModule.class
         }
 )

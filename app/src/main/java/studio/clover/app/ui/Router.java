@@ -5,4 +5,6 @@ public interface Router {
     void showLoginScreen();
 
     void showMessageScreen();
+
+    void goBack();
 }
