@@ -2,6 +2,7 @@ package studio.clover.data.repository;
 
 import clover.studio.domain.model.AccessToken;
 import clover.studio.domain.model.LoginResult;
+import clover.studio.domain.model.User;
 import clover.studio.domain.storage.UserRepository;
 import rx.Completable;
 import rx.Single;
@@ -23,6 +24,11 @@ public final class UserRepositoryImpl implements UserRepository {
     @Override
     public Single<LoginResult> loginUser(final String username, final String password) {
         return userClient.loginUser(ORGANIZATION, username, password);
+    }
+
+    @Override
+    public Completable saveUser(final User user) {
+        return Completable.fromAction(() -> preferences.saveUser(user));
     }
 
     @Override

@@ -3,9 +3,9 @@ package studio.clover.app.injection.application;
 import javax.inject.Singleton;
 
 import dagger.Component;
-import studio.clover.app.injection.module.ApiModule;
-import studio.clover.app.injection.module.DataModule;
-import studio.clover.app.injection.module.UtilsModule;
+import studio.clover.app.injection.application.module.ApiModule;
+import studio.clover.app.injection.application.module.DataModule;
+import studio.clover.app.injection.application.module.UtilsModule;
 
 @Singleton
 @Component(

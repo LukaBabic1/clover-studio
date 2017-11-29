@@ -1,6 +1,10 @@
-package clover.studio.domain.usecase;
+package clover.studio.domain.usecase.login;
+
+import rx.Completable;
 
 public interface LoginUserUseCase {
+
+    Completable execute(Request request);
 
     final class Request {
 

@@ -1,4 +1,4 @@
-package studio.clover.app.injection.module;
+package studio.clover.app.injection.application.module;
 
 import javax.inject.Singleton;
 
