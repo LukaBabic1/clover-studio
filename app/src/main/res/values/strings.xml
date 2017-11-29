@@ -10,4 +10,8 @@
     <string name="fragment_login_invalid_username_or_password_message">Invalid username or password</string>
     <string name="fragment_login_unknown_error">Unknown error</string>
 
+    <!-- Message -->
+    <string name="fragment_message_edit_text_hint">Message</string>
+    <string name="fragment_message_button_send_text">Send</string>
+
 </resources>

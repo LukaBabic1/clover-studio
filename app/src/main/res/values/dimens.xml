@@ -8,4 +8,8 @@
     <dimen name="login_card_view_corner_radius">8dp</dimen>
     <dimen name="login_username_margin">@dimen/default_window_margin</dimen>
 
+    <!-- Message -->
+    <dimen name="message_card_view_elevation">@dimen/login_card_view_elevation</dimen>
+    <dimen name="message_card_view_corner_radius">@dimen/login_card_view_corner_radius</dimen>
+
 </resources>

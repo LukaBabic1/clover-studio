@@ -11,6 +11,7 @@ public final class MessageContract {
 
     public interface Presenter extends ScopedPresenter {
 
+        void sendMessage(String message);
     }
 
     public interface View extends BaseView {

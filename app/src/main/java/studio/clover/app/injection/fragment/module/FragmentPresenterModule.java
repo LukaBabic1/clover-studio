@@ -6,6 +6,8 @@ import studio.clover.app.injection.activity.DaggerFragment;
 import studio.clover.app.injection.scope.FragmentScope;
 import studio.clover.app.ui.login.LoginContract;
 import studio.clover.app.ui.login.LoginPresenter;
+import studio.clover.app.ui.message.MessageContract;
+import studio.clover.app.ui.message.MessagePresenter;
 
 @Module
 public final class FragmentPresenterModule {
@@ -20,6 +22,15 @@ public final class FragmentPresenterModule {
     @FragmentScope
     LoginContract.Presenter provideLoginPresenter() {
         final LoginPresenter presenter = new LoginPresenter((LoginContract.View) fragment);
+        fragment.getFragmentComponent().inject(presenter);
+
+        return presenter;
+    }
+
+    @Provides
+    @FragmentScope
+    MessageContract.Presenter provideMessagesPresenter() {
+        final MessagePresenter presenter = new MessagePresenter((MessageContract.View) fragment);
         fragment.getFragmentComponent().inject(presenter);
 
         return presenter;
