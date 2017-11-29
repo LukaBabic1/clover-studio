@@ -29,6 +29,6 @@ public abstract class DaggerActivity extends AppCompatActivity {
         return CloverApplication.from(this);
     }
 
-    protected abstract void inject(final ActivityComponent activityComponent);
+    protected abstract void inject(final ActivityComponent component);
 }
 

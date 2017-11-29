@@ -44,8 +44,7 @@ public abstract class BasePresenter<View extends BaseView> implements ScopedPres
 
     private Subscription viewActionsSubscription;
 
-    protected String viewId;
-    protected ViewActionQueue<View> viewActionQueue;
+    protected final ViewActionQueue<View> viewActionQueue = new ViewActionQueue<>();
 
     private final CompositeSubscription subscriptions = new CompositeSubscription();
     private final CompositeSubscription permissionSubscriptions = new CompositeSubscription();
