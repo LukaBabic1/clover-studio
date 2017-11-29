@@ -7,4 +7,7 @@
     <string name="fragment_login_password_hint">Password</string>
     <string name="fragment_login_sign_in_button_text">Sign in</string>
 
+    <string name="fragment_login_invalid_username_or_password_message">Invalid username or password</string>
+    <string name="fragment_login_unknown_error">Unknown error</string>
+
 </resources>

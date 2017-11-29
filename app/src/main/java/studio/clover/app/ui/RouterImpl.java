@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 
 import studio.clover.app.R;
 import studio.clover.app.ui.login.LoginFragment;
-import studio.clover.app.utils.UnimplementedMethodException;
+import studio.clover.app.ui.message.MessageFragment;
 
 public final class RouterImpl implements Router {
 
@@ -28,7 +28,9 @@ public final class RouterImpl implements Router {
 
     @Override
     public void showMessageScreen() {
-        throw new UnimplementedMethodException();
+        fragmentManager.beginTransaction()
+                       .replace(CONTAINER_ID, MessageFragment.newInstance())
+                       .commit();
     }
 
     @Override

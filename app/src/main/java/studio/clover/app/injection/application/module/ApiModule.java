@@ -11,6 +11,8 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 import studio.clover.app.BuildConfig;
+import studio.clover.data.network.NetworkErrorHandler;
+import studio.clover.data.network.NetworkErrorHandlerImpl;
 import studio.clover.data.network.converter.ApiConverter;
 import studio.clover.data.network.converter.ApiConverterImpl;
 import studio.clover.data.network.client.UserClient;
@@ -69,8 +71,14 @@ public final class ApiModule {
 
     @Provides
     @Singleton
-    UserClient provideUserClient(final ApiConverter apiConverter, final UserService userService) {
-        return new UserClientImpl(apiConverter, userService);
+    NetworkErrorHandler provideNetworkErrorHandler() {
+        return new NetworkErrorHandlerImpl();
+    }
+
+    @Provides
+    @Singleton
+    UserClient provideUserClient(final ApiConverter apiConverter, final NetworkErrorHandler networkErrorHandler, final UserService userService) {
+        return new UserClientImpl(apiConverter, networkErrorHandler, userService);
     }
 
     public interface Exposes {

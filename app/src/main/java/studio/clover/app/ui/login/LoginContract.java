@@ -11,9 +11,13 @@ public final class LoginContract {
 
     public interface Presenter extends ScopedPresenter {
 
+        void singIn(String username, String password);
     }
 
     public interface View extends BaseView {
 
+        void showInvalidCredentialsError();
+
+        void showUnknownErrorMessage();
     }
 }

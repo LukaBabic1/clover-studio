@@ -10,5 +10,5 @@ import studio.clover.data.network.apimodel.ApiLoginResponse;
 public interface UserService {
 
     @POST("signin/")
-    Single<ApiLoginResponse> loginUser(@Header("Content-Type") String contentType, @Body ApiLoginRequest request);
+    Single<ApiLoginResponse> loginUser(@Header("Content-Type") String contentType, @Header("apikey") String apiKey, @Body ApiLoginRequest request);
 }
