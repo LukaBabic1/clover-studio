@@ -17,9 +17,13 @@ public final class LoginPresenter extends BasePresenter<LoginContract.View> impl
 
     @Override
     public void singIn(final String username, final String password) {
+        doIfViewNotNull(LoginContract.View::showLoading);
         viewActionQueue.subscribeTo(loginUserUseCase.execute(new LoginUserUseCase.Request(username, password))
                                                     .subscribeOn(backgroundScheduler),
-                                    view -> router.showMessageScreen(),
+                                    view -> {
+                                        view.hideLoading();
+                                        router.showMessageScreen();
+                                    },
                                     this::processLogInError);
     }
 

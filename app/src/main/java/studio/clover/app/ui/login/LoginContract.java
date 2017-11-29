@@ -16,6 +16,10 @@ public final class LoginContract {
 
     public interface View extends BaseView {
 
+        void showLoading();
+
+        void hideLoading();
+
         void showInvalidCredentialsError();
 
         void showUnknownErrorMessage();

@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import javax.inject.Inject;
@@ -23,6 +25,12 @@ public final class LoginFragment extends BaseFragment implements LoginContract.V
 
     @BindView(R.id.fragment_login_username_password)
     EditText passwordEditText;
+
+    @BindView(R.id.fragment_login_sign_in_button)
+    Button signInButton;
+
+    @BindView(R.id.fragment_login_progress_bar)
+    ProgressBar progressBar;
 
     @Inject
     LoginContract.Presenter presenter;
@@ -53,6 +61,22 @@ public final class LoginFragment extends BaseFragment implements LoginContract.V
     @Override
     public ScopedPresenter getPresenter() {
         return presenter;
+    }
+
+    @Override
+    public void showLoading() {
+        usernameEditText.setEnabled(false);
+        passwordEditText.setEnabled(false);
+        signInButton.setEnabled(false);
+        progressBar.setVisibility(View.VISIBLE);
+    }
+
+    @Override
+    public void hideLoading() {
+        usernameEditText.setEnabled(true);
+        passwordEditText.setEnabled(true);
+        signInButton.setEnabled(true);
+        progressBar.setVisibility(View.GONE);
     }
 
     @Override
