@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="default_window_margin">16dp</dimen>
+
+    <!-- Login -->
+    <dimen name="login_card_view_elevation">8dp</dimen>
+    <dimen name="login_card_view_corner_radius">8dp</dimen>
+    <dimen name="login_username_margin">@dimen/default_window_margin</dimen>
+
+</resources>

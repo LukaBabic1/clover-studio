@@ -19,6 +19,10 @@ public final class MainPresenter extends BasePresenter<MainContract.View> implem
     @Override
     public void start() {
         super.start();
+        showAppropriateScreen();
+    }
+
+    private void showAppropriateScreen() {
         viewActionQueue.subscribeTo(isUserLoggedInUseCase.execute()
                                                          .map(this::mapToViewAction)
                                                          .subscribeOn(backgroundScheduler),
