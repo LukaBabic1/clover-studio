@@ -1,11 +1,11 @@
-package studio.clover.app.ui.message;
+package studio.clover.app.ui.main;
 
 import studio.clover.app.base.BaseView;
 import studio.clover.app.base.ScopedPresenter;
 
-public final class MessageContract {
+public final class MainContract {
 
-    private MessageContract() {
+    private MainContract() {
 
     }
 

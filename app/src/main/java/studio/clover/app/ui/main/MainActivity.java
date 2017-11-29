@@ -1,9 +1,10 @@
-package studio.clover.app;
+package studio.clover.app.ui.main;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import butterknife.ButterKnife;
+import studio.clover.app.R;
 
 public final class MainActivity extends AppCompatActivity {
 
