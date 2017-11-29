@@ -2,6 +2,7 @@ package studio.clover.app.ui.login;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -56,12 +57,16 @@ public final class LoginFragment extends BaseFragment implements LoginContract.V
 
     @Override
     public void showInvalidCredentialsError() {
-        Toast.makeText(getContext(), R.string.fragment_login_invalid_username_or_password_message, Toast.LENGTH_SHORT).show();
+        showShortToast(R.string.fragment_login_invalid_username_or_password_message);
     }
 
     @Override
     public void showUnknownErrorMessage() {
-        Toast.makeText(getContext(), R.string.fragment_login_unknown_error, Toast.LENGTH_SHORT).show();
+        showShortToast(R.string.fragment_login_unknown_error);
+    }
+
+    private void showShortToast(@StringRes final int textResource) {
+        Toast.makeText(getContext(), textResource, Toast.LENGTH_SHORT).show();
     }
 
     @OnClick(R.id.fragment_login_sign_in_button)
