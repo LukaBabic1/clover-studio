@@ -13,7 +13,7 @@ import com.annimon.stream.Optional;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
-import studio.clover.app.injection.activity.DaggerFragment;
+import studio.clover.app.injection.fragment.DaggerFragment;
 
 public abstract class BaseFragment extends DaggerFragment implements BackPropagatingFragment {
 

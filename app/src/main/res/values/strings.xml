@@ -2,16 +2,20 @@
 
     <string name="app_name">CloverStudio</string>
 
+    <string name="error_unknown_message">Unknown error</string>
+
     <!-- Login -->
     <string name="fragment_login_username_hint">Username</string>
     <string name="fragment_login_password_hint">Password</string>
     <string name="fragment_login_sign_in_button_text">Sign in</string>
 
     <string name="fragment_login_invalid_username_or_password_message">Invalid username or password</string>
-    <string name="fragment_login_unknown_error">Unknown error</string>
+    <string name="fragment_login_unknown_error">@string/error_unknown_message</string>
 
     <!-- Message -->
     <string name="fragment_message_edit_text_hint">Message</string>
     <string name="fragment_message_button_send_text">Send</string>
+    <string name="fragment_message_empty_message_text">Message body is empty</string>
+    <string name="fragment_message_menu_item_log_out_text">Log out</string>
 
 </resources>

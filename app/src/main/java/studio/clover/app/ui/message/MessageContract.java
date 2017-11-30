@@ -12,9 +12,20 @@ public final class MessageContract {
     public interface Presenter extends ScopedPresenter {
 
         void sendMessage(String message);
+
+        void logOut();
     }
 
     public interface View extends BaseView {
 
+        void showLoading();
+
+        void hideLoading();
+
+        void showUnknownErrorMessage();
+
+        void clearMessageField();
+
+        void showEmptyMessageError();
     }
 }

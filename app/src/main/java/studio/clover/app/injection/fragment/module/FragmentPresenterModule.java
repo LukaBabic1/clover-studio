@@ -2,7 +2,7 @@ package studio.clover.app.injection.fragment.module;
 
 import dagger.Module;
 import dagger.Provides;
-import studio.clover.app.injection.activity.DaggerFragment;
+import studio.clover.app.injection.fragment.DaggerFragment;
 import studio.clover.app.injection.scope.FragmentScope;
 import studio.clover.app.ui.login.LoginContract;
 import studio.clover.app.ui.login.LoginPresenter;
