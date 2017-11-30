@@ -9,7 +9,7 @@ import studio.clover.data.network.apimodel.ApiSendMessageResponse;
 
 public interface MessageService {
 
-    @POST
+    @POST("messages/")
     Single<ApiSendMessageResponse> sendMessage(@Header("Content-Type") String contentType, @Header("apikey") String apiKey, @Header("access-token") String accessToken,
                                                @Body ApiSendMessageRequest request);
 }

@@ -27,5 +27,7 @@ public final class MessageContract {
         void clearMessageField();
 
         void showEmptyMessageError();
+
+        void showMessageSentPrompt();
     }
 }

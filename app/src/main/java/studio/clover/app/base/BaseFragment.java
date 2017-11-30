@@ -4,9 +4,11 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.annimon.stream.Optional;
 
@@ -74,6 +76,10 @@ public abstract class BaseFragment extends DaggerFragment implements BackPropaga
     public boolean onBack() {
         getPresenter().back();
         return true;
+    }
+
+    protected final void showShortToast(@StringRes final int stringResourceId) {
+        Toast.makeText(getContext(), stringResourceId, Toast.LENGTH_SHORT).show();
     }
 
     public abstract ScopedPresenter getPresenter();

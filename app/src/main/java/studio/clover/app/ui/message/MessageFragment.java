@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import javax.inject.Inject;
 
@@ -94,12 +93,17 @@ public final class MessageFragment extends BaseFragment implements MessageContra
 
     @Override
     public void showEmptyMessageError() {
-        Toast.makeText(getContext(), R.string.fragment_message_empty_message_text, Toast.LENGTH_SHORT).show();
+        showShortToast(R.string.fragment_message_empty_message_text);
     }
 
     @Override
     public void showUnknownErrorMessage() {
-        Toast.makeText(getContext(), R.string.error_unknown_message, Toast.LENGTH_SHORT).show();
+        showShortToast(R.string.error_unknown_message);
+    }
+
+    @Override
+    public void showMessageSentPrompt() {
+        showShortToast(R.string.fragment_message_message_sent);
     }
 
     @OnClick(R.id.fragment_message_button_send)

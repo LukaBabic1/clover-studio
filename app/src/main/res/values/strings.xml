@@ -16,6 +16,7 @@
     <string name="fragment_message_edit_text_hint">Message</string>
     <string name="fragment_message_button_send_text">Send</string>
     <string name="fragment_message_empty_message_text">Message body is empty</string>
+    <string name="fragment_message_message_sent">Message sent</string>
     <string name="fragment_message_menu_item_log_out_text">Log out</string>
 
 </resources>

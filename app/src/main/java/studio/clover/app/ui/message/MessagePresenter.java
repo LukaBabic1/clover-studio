@@ -32,11 +32,12 @@ public final class MessagePresenter extends BasePresenter<MessageContract.View> 
     }
 
     private void sendMessageInternal(final String message) {
-        viewActionQueue.subscribeTo(sendMessageUseCase.execute(message)
+        viewActionQueue.subscribeTo(sendMessageUseCase.execute(message.trim().toLowerCase())
                                                       .subscribeOn(backgroundScheduler),
                                     view -> {
                                         view.hideLoading();
                                         view.clearMessageField();
+                                        view.showMessageSentPrompt();
                                     },
                                     throwable -> doIfViewNotNull(MessageContract.View::showUnknownErrorMessage));
     }
