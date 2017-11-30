@@ -1,4 +1,4 @@
-package clover.studio.domain.storage;
+package clover.studio.domain.repository;
 
 import clover.studio.domain.model.AccessToken;
 import clover.studio.domain.model.LoginResult;

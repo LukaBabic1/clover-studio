@@ -3,7 +3,7 @@ package clover.studio.domain.usecase.login;
 import clover.studio.domain.model.AccessToken;
 import clover.studio.domain.model.LoginResult;
 import clover.studio.domain.model.User;
-import clover.studio.domain.storage.UserRepository;
+import clover.studio.domain.repository.UserRepository;
 import rx.Completable;
 
 public final class LoginUserUseCaseImpl implements LoginUserUseCase {

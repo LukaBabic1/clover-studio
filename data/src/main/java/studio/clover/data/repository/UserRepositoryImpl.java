@@ -3,7 +3,7 @@ package studio.clover.data.repository;
 import clover.studio.domain.model.AccessToken;
 import clover.studio.domain.model.LoginResult;
 import clover.studio.domain.model.User;
-import clover.studio.domain.storage.UserRepository;
+import clover.studio.domain.repository.UserRepository;
 import rx.Completable;
 import rx.Single;
 import studio.clover.data.network.client.UserClient;

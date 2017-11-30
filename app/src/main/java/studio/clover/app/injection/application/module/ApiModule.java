@@ -13,12 +13,15 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import studio.clover.app.BuildConfig;
 import studio.clover.data.network.NetworkErrorHandler;
 import studio.clover.data.network.NetworkErrorHandlerImpl;
+import studio.clover.data.network.client.MessageClient;
+import studio.clover.data.network.client.MessageClientImpl;
 import studio.clover.data.network.converter.ApiConverter;
 import studio.clover.data.network.converter.ApiConverterImpl;
 import studio.clover.data.network.client.UserClient;
 import studio.clover.data.network.client.UserClientImpl;
 import studio.clover.data.network.configuration.Urls;
 import studio.clover.data.network.configuration.UrlsImpl;
+import studio.clover.data.network.serice.MessageService;
 import studio.clover.data.network.serice.UserService;
 
 @Module
@@ -65,6 +68,12 @@ public final class ApiModule {
 
     @Provides
     @Singleton
+    MessageService messageService(final Retrofit retrofit) {
+        return retrofit.create(MessageService.class);
+    }
+
+    @Provides
+    @Singleton
     UserService provideUserService(final Retrofit retrofit) {
         return retrofit.create(UserService.class);
     }
@@ -73,6 +82,12 @@ public final class ApiModule {
     @Singleton
     NetworkErrorHandler provideNetworkErrorHandler() {
         return new NetworkErrorHandlerImpl();
+    }
+
+    @Provides
+    @Singleton
+    MessageClient provideMessageClient(final MessageService messageService) {
+        return new MessageClientImpl(messageService);
     }
 
     @Provides

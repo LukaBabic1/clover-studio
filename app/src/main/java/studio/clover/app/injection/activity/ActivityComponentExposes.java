@@ -6,4 +6,4 @@ import studio.clover.app.injection.application.module.UseCaseModule;
 
 public interface ActivityComponentExposes extends ApplicationComponentExposes,
                                                   ActivityModule.Exposes,
-                                                  UseCaseModule.Expoese{ }
+                                                  UseCaseModule.Exposes { }
